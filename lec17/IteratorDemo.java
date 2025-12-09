@@ -1,0 +1,23 @@
+package lec17;
+import java.util.*;
+
+public class IteratorDemo {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+        Iterator<Integer> it = list.iterator();
+
+        while (it.hasNext()) {
+            if (it.next() == 3) {
+                it.remove();
+            }
+        }
+
+        System.out.println(list);
+    }
+}
